@@ -1,0 +1,15 @@
+{
+	"block.mousepillars.transformation_pillar": "Transformation Pillar",
+	"block.mousepillars.link_button": "Link Button",
+	"screen.mousepillars.pillar.title": "Transformation Pillar",
+	"screen.mousepillars.button.title": "Link Button",
+	"screen.mousepillars.state_on": "State: ON",
+	"screen.mousepillars.state_off": "State: OFF",
+	"screen.mousepillars.range": "Range (N x N blocks)",
+	"screen.mousepillars.link_id": "Link ID",
+	"screen.mousepillars.apply": "Apply",
+	"message.mousepillars.pillars_on": "Pillars [%s]: ON",
+	"message.mousepillars.pillars_off": "Pillars [%s]: OFF",
+	"message.mousepillars.no_link_id": "This button has no link ID",
+	"message.mousepillars.no_pillars": "No active pillar found with ID [%s]"
+}

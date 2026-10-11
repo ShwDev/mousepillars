@@ -1,0 +1,15 @@
+{
+	"block.mousepillars.transformation_pillar": "Pilar de Transformación",
+	"block.mousepillars.link_button": "Botón de Vinculación",
+	"screen.mousepillars.pillar.title": "Pilar de Transformación",
+	"screen.mousepillars.button.title": "Botón de Vinculación",
+	"screen.mousepillars.state_on": "Estado: ACTIVADO",
+	"screen.mousepillars.state_off": "Estado: DESACTIVADO",
+	"screen.mousepillars.range": "Rango (N x N bloques)",
+	"screen.mousepillars.link_id": "ID de vinculación",
+	"screen.mousepillars.apply": "Aplicar",
+	"message.mousepillars.pillars_on": "Pilares [%s]: ACTIVADOS",
+	"message.mousepillars.pillars_off": "Pilares [%s]: DESACTIVADOS",
+	"message.mousepillars.no_link_id": "Este botón no tiene ID de vinculación",
+	"message.mousepillars.no_pillars": "No hay ningún pilar activo con la ID [%s]"
+}

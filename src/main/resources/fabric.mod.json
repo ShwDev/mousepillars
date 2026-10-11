@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "mousepillars",
+	"version": "${version}",
+	"name": "mousePillars",
+	"description": "Pilares que transforman al jugador en ratón dentro de un área, inspirados en el Palacio de Shido de Persona 5.",
+	"authors": [
+		"shaw"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mousepillars/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"shaw.mousepillars.MousePillars"
+		],
+		"client": [
+			"shaw.mousepillars.client.MousePillarsClient"
+		]
+	},
+	"mixins": [
+		"mousepillars.mixins.json",
+		{
+			"config": "mousepillars.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
