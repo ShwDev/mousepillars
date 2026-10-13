@@ -14,7 +14,6 @@ import shaw.mousepillars.blockentity.LinkButtonBlockEntity;
 import shaw.mousepillars.blockentity.PillarBlockEntity;
 import shaw.mousepillars.network.UpdateButtonConfigPayload;
 
-/** GUI del botón de control (solo Creativo): únicamente la ID de vinculación. */
 public class ButtonConfigScreen extends Screen {
 	private static final int WIDGET_WIDTH = 200;
 

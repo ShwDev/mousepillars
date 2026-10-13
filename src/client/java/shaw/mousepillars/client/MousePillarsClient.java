@@ -23,7 +23,7 @@ import shaw.mousepillars.network.OpenConfigScreenPayload;
 public class MousePillarsClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
-		// Servidor -> cliente: abrir la GUI de configuración.
+
 		ClientPlayNetworking.registerGlobalReceiver(OpenConfigScreenPayload.TYPE, (payload, context) -> {
 			Minecraft client = context.client();
 			client.gui.setScreen(payload.button()
@@ -31,7 +31,7 @@ public class MousePillarsClient implements ClientModInitializer {
 					: new PillarConfigScreen(payload.pos()));
 		});
 
-		// Sin inventario: si se abre cualquier pantalla de contenedor (inventario, creativo, cofre...) siendo ratón, se cierra.
+
 		ScreenEvents.AFTER_INIT.register((client, screen, scaledWidth, scaledHeight) -> {
 			if (screen instanceof AbstractContainerScreen<?> && isLocalPlayerMouse(client)) {
 				client.execute(() -> {
@@ -42,11 +42,9 @@ public class MousePillarsClient implements ClientModInitializer {
 			}
 		});
 
-		// Sin hotbar: se oculta la barra y el texto del ítem sostenido mientras seas ratón.
 		hideWhileMouse(VanillaHudElements.HOTBAR);
 		hideWhileMouse(VanillaHudElements.HELD_ITEM_TOOLTIP);
 
-		// Aspecto del ratón: el oso de prueba. Para volver al modelo de jugador encogido, usa DefaultMouseAppearance.
 		MouseAppearances.set(new BearMouseAppearance());
 		LivingEntityRenderLayerRegistrationCallback.EVENT.register((entityType, entityRenderer, registrationHelper, context) -> {
 			if (entityRenderer instanceof AvatarRenderer avatarRenderer) {

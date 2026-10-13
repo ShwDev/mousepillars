@@ -1,6 +1,5 @@
 package shaw.mousepillars.client.render;
 
-/** Contenedor del aspecto activo del ratón. Un solo punto de acceso para el mixin de render. */
 public final class MouseAppearances {
 	private static MouseAppearance current = new DefaultMouseAppearance();
 

@@ -13,11 +13,6 @@ import net.minecraft.world.entity.Avatar;
 import shaw.mousepillars.client.render.MouseAppearances;
 import shaw.mousepillars.logic.MouseState;
 
-/**
- * Único punto de enganche con el renderer del jugador. No contiene lógica de dibujo:
- * solo detecta "este jugador es ratón" y delega en MouseAppearances.get().apply(state).
- * (Mismo patrón y firma que el mixin de AvatarRenderer del test mod de Fabric API.)
- */
 @Mixin(AvatarRenderer.class)
 public abstract class AvatarRendererMixin<AvatarlikeEntity extends Avatar & ClientAvatarEntity> {
 	@Inject(

@@ -13,17 +13,11 @@ import net.minecraft.network.chat.Component;
 import shaw.mousepillars.blockentity.PillarBlockEntity;
 import shaw.mousepillars.network.UpdatePillarConfigPayload;
 
-/**
- * GUI del pilar (solo Creativo). Es una Screen de cliente pura, sin ScreenHandler: no hay slots ni ítems,
- * solo tres valores. Los valores iniciales se leen del BlockEntity del cliente (ya sincronizado con el chunk)
- * y los cambios viajan al servidor en un único paquete al pulsar "Aplicar".
- */
 public class PillarConfigScreen extends Screen {
 	private static final int WIDGET_WIDTH = 200;
 
 	private final BlockPos pos;
 
-	// El estado vive en campos (no en los widgets) para sobrevivir a init(), que se vuelve a ejecutar al cambiar el tamaño de ventana.
 	private boolean enabled;
 	private String rangeText;
 	private String linkIdText;
@@ -88,7 +82,7 @@ public class PillarConfigScreen extends Screen {
 		try {
 			range = Integer.parseInt(this.rangeText.replaceAll("\\D", ""));
 		} catch (NumberFormatException ignored) {
-			// campo vacío: se queda en el mínimo; el servidor además vuelve a acotar el valor
+
 		}
 		ClientPlayNetworking.send(new UpdatePillarConfigPayload(this.pos, this.enabled, range, this.linkIdText));
 	}
